@@ -8,6 +8,38 @@ from gtts import gTTS
 from io import BytesIO
 import openai
 
+
+st.set_page_config(
+    page_title="Your App Title",
+    layout="centered",
+    initial_sidebar_state="expanded",
+    menu_items={
+        "Get help": None,
+        "Report a bug": None,
+        "About": None,
+    },
+)
+
+st.markdown(
+    "<style>footer {visibility: hidden;}</style>", unsafe_allow_html=True)
+
+# Centered title
+st.markdown("""
+<style>
+.centered-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom:40px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown('<div class="centered-title">BoloGPT</div>',
+            unsafe_allow_html=True)
+
 openai.api_key = "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"
 
 if 'prompts' not in st.session_state:
@@ -31,7 +63,6 @@ sound = BytesIO()
 
 placeholder = st.container()
 
-placeholder.title("BoloGPT")
 stt_button = Button(label='SPEAK', button_type='success',
                     margin=(5, 5, 5, 5), width=200)
 
