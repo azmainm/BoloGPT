@@ -131,7 +131,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = os.environ['OPEN_API_KEY']
 
 if 'prompts' not in st.session_state:
     st.session_state['prompts'] = [
