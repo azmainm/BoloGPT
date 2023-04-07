@@ -130,7 +130,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 if 'prompts' not in st.session_state:
     st.session_state['prompts'] = [
