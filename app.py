@@ -6,6 +6,7 @@ from googletrans import Translator
 from gtts import gTTS
 from io import BytesIO
 import openai
+import os
 
 st.set_page_config(
     page_title="BoloGPT",
@@ -130,7 +131,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-openai.api_key = "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"
+openai.api_key = os.environ['OPENAI_API_KEY']
 
 if 'prompts' not in st.session_state:
     st.session_state['prompts'] = [
